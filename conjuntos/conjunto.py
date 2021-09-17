@@ -34,5 +34,6 @@ class Conjunto():
     def remover_posicao(self, posicao):
         self.__elementos.remover_posicao(posicao)
 
+
     def remover_elemento(self, elemento):
         self.__elementos.remover_elemento(elemento)
