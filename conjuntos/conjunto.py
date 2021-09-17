@@ -6,7 +6,7 @@ class Conjunto():
 
     def inserir(self, elemento):
         if not self.contem(elemento):
-            self.inserir(elemento)
+            self.__elementos.inserir(elemento)
             return True
         return False
 
