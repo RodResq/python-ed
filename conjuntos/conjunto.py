@@ -1,8 +1,9 @@
 from listas import lista_ligada
+from espalhamento import tabela_espalhamento
 
 class Conjunto():
     def __init__(self):
-        self.__elementos = lista_ligada.ListaLigada()
+        self.__elementos = tabela_espalhamento.TabelaEspalhamento()
 
     def inserir(self, elemento):
         if not self.contem(elemento):
