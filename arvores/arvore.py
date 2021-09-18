@@ -50,5 +50,58 @@ class Arvore():
                     print("Navegando pela esquerda do no", referencia.valor.__str__())
                     return self.__buscar(referencia.no_esquerdo, no_busca)
 
+    def em_ordem(self):
+        self.__em_ordem(self.__raiz)
+
+    def __em_ordem(self, referencia):
+        if referencia.no_esquerdo is not None:
+            self.__em_ordem(referencia.no_esquerdo)
+            print(referencia.valor.__str__())
+            if referencia.no_direito is not None:
+                self.__em_ordem(referencia.no_direito)
+        else:
+            print(referencia.valor.__str__())
+            if referencia.no_direito is not None:
+                self.__em_ordem(referencia.no_direito)
+
+    def pre_ordem(self):
+        self.__pre_ordem(self.__raiz)
+
+    def __pre_ordem(self, referencia):
+        print(referencia.valor.__str__())
+        if referencia.no_esquerdo is not None:
+            self.__pre_ordem(referencia.no_esquerdo)
+            if referencia.no_direito is not None:
+                self.__pre_ordem(referencia.no_direito)
+        else:
+            if referencia.no_direito is not None:
+                self.__pre_ordem(referencia.no_direito)
+
+    def pos_ordem(self):
+        self.__pos_ordem(self.__raiz)
+
+    def __pos_ordem(self, referencia):
+        if referencia.no_esquerdo is not None:
+            self.__pos_ordem(referencia.no_esquerdo)
+            if referencia.no_direito is not None:
+                self.__pos_ordem(referencia.no_direito)
+            print(referencia.valor.__str__())
+        else:
+            if referencia.no_direito is not None:
+                self.__pos_ordem(referencia.no_direito)
+                print(referencia.valor.__str__())
+            else:
+                print(referencia.valor.__str__())
+
+    def altura(self):
+        return self.__altura(self.__raiz)
+
+    def __altura(self, referencia):
+        if referencia is None:
+            return -1
+        altura_esquerda = self.__altura(referencia.no_esquerdo)
+        altura_direita = self.__altura(referencia.no_direito)
+        return (altura_esquerda + 1) if altura_esquerda > altura_direita else (altura_direita + 1)
+
     def __str__(self):
         return "[(X)]" if self.__raiz is None else self.__raiz.__str__()

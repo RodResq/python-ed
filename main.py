@@ -124,8 +124,15 @@ elif menu == 8:
     arvore_test.inserir_elemento(no_arvore_inteiro.NoArvoreInteriro(6))
     arvore_test.inserir_elemento(no_arvore_inteiro.NoArvoreInteriro(8))
     arvore_test.inserir_elemento(no_arvore_inteiro.NoArvoreInteriro(7))
-    print(arvore_test)
-    print(arvore_test.buscar(no_arvore_inteiro.NoArvoreInteriro(7)))
-
+    # print(arvore_test)
+    # print(arvore_test.buscar(no_arvore_inteiro.NoArvoreInteriro(7)))
+    print("Em Ordem")
+    print(arvore_test.em_ordem())
+    print("Pre-Ordem")
+    print(arvore_test.pre_ordem())
+    print("Pos-Ordem")
+    print(arvore_test.pos_ordem())
+    print("Altura")
+    print(arvore_test.altura())
 else:
     print("Opcao Invalida!")
