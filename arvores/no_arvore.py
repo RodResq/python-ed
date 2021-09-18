@@ -32,6 +32,6 @@ class NoArvore(ABC):
 
 
     def __str__(self):
-        return ("[(X)]" if self.__no_esquerdo == None else f'[({self.__no_esquerdo.__str__()})]') + \
+        return ("[(X)]" if self.__no_esquerdo is None else f'[({self.__no_esquerdo.__str__()})]') + \
                (f'[({self.valor.__str__()}') + \
-               ("[(X)]" if self.__no_direito == None else f'[({self.__no_direito.__str__()})]')
+               ("[(X)]" if self.__no_direito is None else f'[({self.__no_direito.__str__()})]')
