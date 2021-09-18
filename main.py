@@ -5,6 +5,7 @@ from pilhas import pilha
 from filas import fila
 from conjuntos import conjunto
 from mapas import mapa
+from arvores import arvore, no_arvore_inteiro
 
 
 # vetor_inteiros = array('b', [1, 2, 3])
@@ -22,6 +23,7 @@ print("4. Pilhas")
 print("5. Filas")
 print("6. Conjuntos")
 print("7. Mapas")
+print("8. Arvores")
 
 
 menu = int(input("Digite a opcao desejada: "))
@@ -112,6 +114,14 @@ elif menu == 7:
     mapa_teste.adicionar("par", 2)
     print(mapa_teste)
     print(mapa_teste.contem_chave("par"))
+
+elif menu == 8:
+    arvore_test = arvore.Arvore()
+    print(arvore_test)
+    arvore_test.inserir_elemento(no_arvore_inteiro.NoArvoreInteriro(5))
+    print(arvore_test)
+    arvore_test.inserir_elemento(no_arvore_inteiro.NoArvoreInteriro(4))
+    print(arvore_test)
 
 else:
     print("Opcao Invalida!")
